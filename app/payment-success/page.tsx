@@ -1,19 +1,23 @@
 'use client';
-
 import { useEffect, useState } from 'react';
 
 interface PaymentSuccessProps {
-  searchParams: { 
+  searchParams: Promise<{
     amount?: string;
-  };
+  }>;
 }
 
 export default function PaymentSuccess({ searchParams }: PaymentSuccessProps) {
-  const amount = searchParams.amount ?? "0.00";
+  const [amount, setAmount] = useState<string>('0.00');
   const [currentDate, setCurrentDate] = useState<string>('');
   const [transactionId, setTransactionId] = useState<string>('');
 
   useEffect(() => {
+    // Resolve searchParams
+    searchParams.then((params) => {
+      setAmount(params.amount ?? '0.00');
+    });
+
     // Set date
     const now = new Date();
     const dateStr = now.toLocaleDateString('en-US', {
@@ -24,11 +28,11 @@ export default function PaymentSuccess({ searchParams }: PaymentSuccessProps) {
       minute: '2-digit'
     });
     setCurrentDate(dateStr);
-    
+
     // Generate random transaction ID
     const transId = Math.floor(Math.random() * 900000) + 100000;
     setTransactionId(transId.toString());
-  }, []);
+  }, [searchParams]);
 
   const printReceipt = () => {
     window.print();
@@ -40,13 +44,12 @@ export default function PaymentSuccess({ searchParams }: PaymentSuccessProps) {
     link.href = 'data:application/pdf;base64,JVBERi0xLjQKJdPr6eEKMSAwIG9iago8PAovVGl0bGUgKE9kZW1lIE1ha2J1enUpCi9Qcm9kdWNlciAoU2FtcGxlIFBERikKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1R5cGUgL0NhdGFsb2cKL1BhZ2VzIDMgMCBSCj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9QYWdlcwovS2lkcyBbNCAwIFJdCi9Db3VudCAxCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9UeXBlIC9QYWdlCi9QYXJlbnQgMyAwIFIKL01lZGlhQm94IFswIDAgNjEyIDc5Ml0KPj4KZW5kb2JqCnhyZWYKMCA1CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAwOSAwMDAwMCBuIAowMDAwMDAwMDc0IDAwMDAwIG4gCjAwMDAwMDAxMjEgMDAwMDAgbiAKMDAwMDAwMDE3OCAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDUKL1Jvb3QgMiAwIFIKPj4Kc3RhcnR4cmVmCjI3MwolJUVPRg==';
     link.download = 'payment-receipt.pdf';
     link.click();
-    
+
     // Show success message
     const button = event.target as HTMLButtonElement;
     const originalText = button.innerHTML;
     button.innerHTML = '<svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Downloaded!';
     button.classList.add('bg-green-600');
-    
     setTimeout(() => {
       button.innerHTML = originalText;
       button.classList.remove('bg-green-600');
@@ -58,50 +61,40 @@ export default function PaymentSuccess({ searchParams }: PaymentSuccessProps) {
       {/* CSS Animations */}
       <style jsx>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
         body {
           font-family: 'Inter', sans-serif;
         }
-        
         .success-animation {
           animation: successPulse 2s ease-in-out infinite;
         }
-        
         @keyframes successPulse {
           0%, 100% { transform: scale(1) rotate(0deg); }
           25% { transform: scale(1.1) rotate(-5deg); }
           50% { transform: scale(1.15) rotate(0deg); }
           75% { transform: scale(1.1) rotate(5deg); }
         }
-        
         .fade-in {
           animation: fadeIn 0.8s ease-out;
         }
-        
         .fade-in-delayed {
           animation: fadeIn 1.2s ease-out;
         }
-        
         .slide-up {
           animation: slideUp 1s ease-out;
         }
-        
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(30px); }
           to { opacity: 1; transform: translateY(0); }
         }
-        
         @keyframes slideUp {
           from { opacity: 0; transform: translateY(50px) scale(0.9); }
           to { opacity: 1; transform: translateY(0) scale(1); }
         }
-        
         .receipt-item {
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           position: relative;
           overflow: hidden;
         }
-        
         .receipt-item::before {
           content: '';
           position: absolute;
@@ -112,23 +105,19 @@ export default function PaymentSuccess({ searchParams }: PaymentSuccessProps) {
           background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
           transition: left 0.5s;
         }
-        
         .receipt-item:hover::before {
           left: 100%;
         }
-        
         .receipt-item:hover {
           background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
           transform: translateX(8px) scale(1.02);
           box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
-        
         .print-btn {
           position: relative;
           overflow: hidden;
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
         .print-btn::before {
           content: '';
           position: absolute;
@@ -139,35 +128,28 @@ export default function PaymentSuccess({ searchParams }: PaymentSuccessProps) {
           background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
           transition: left 0.6s;
         }
-        
         .print-btn:hover::before {
           left: 100%;
         }
-        
         .print-btn:hover {
           transform: translateY(-4px) scale(1.05);
           box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
         }
-        
         .floating {
           animation: floating 3s ease-in-out infinite;
         }
-        
         @keyframes floating {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-10px); }
         }
-        
         .glow {
           box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
           animation: glow 2s ease-in-out infinite alternate;
         }
-        
         @keyframes glow {
           from { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
           to { box-shadow: 0 0 30px rgba(34, 197, 94, 0.6); }
         }
-        
         .gradient-text {
           background: linear-gradient(135deg, #10b981, #3b82f6, #8b5cf6);
           -webkit-background-clip: text;
@@ -175,12 +157,10 @@ export default function PaymentSuccess({ searchParams }: PaymentSuccessProps) {
           background-clip: text;
           animation: gradientShift 3s ease-in-out infinite;
         }
-        
         @keyframes gradientShift {
           0%, 100% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
         }
-        
         .particle {
           position: absolute;
           width: 4px;
@@ -189,25 +169,20 @@ export default function PaymentSuccess({ searchParams }: PaymentSuccessProps) {
           border-radius: 50%;
           animation: particle 4s linear infinite;
         }
-        
         @keyframes particle {
           0% { transform: translateY(0) rotate(0deg); opacity: 1; }
           100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
         }
-        
         .card-hover {
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
         .card-hover:hover {
           transform: translateY(-8px) rotateX(5deg);
           box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
-        
         .step-item {
           transition: all 0.3s ease;
         }
-        
         .step-item:hover {
           transform: translateX(10px);
           background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
@@ -286,12 +261,10 @@ export default function PaymentSuccess({ searchParams }: PaymentSuccessProps) {
               </div>
               <span className="font-semibold text-gray-800">${amount}</span>
             </div>
-            
             <div className="receipt-item flex justify-between items-center py-3 px-4 rounded-lg">
               <span className="text-gray-600">VAT (18%)</span>
               <span className="text-gray-600">${(parseFloat(amount) * 0.18).toFixed(2)}</span>
             </div>
-            
             <div className="receipt-item flex justify-between items-center py-3 px-4 rounded-lg">
               <span className="text-gray-600">Discount</span>
               <span className="text-green-600">-$20.00</span>
@@ -328,8 +301,8 @@ export default function PaymentSuccess({ searchParams }: PaymentSuccessProps) {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 mb-6 fade-in-delayed">
-          <button 
-            onClick={printReceipt} 
+          <button
+            onClick={printReceipt}
             className="print-btn flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-5 px-8 rounded-2xl transition-all duration-300 flex items-center justify-center shadow-lg"
           >
             <div className="flex items-center">
@@ -342,8 +315,8 @@ export default function PaymentSuccess({ searchParams }: PaymentSuccessProps) {
             </div>
           </button>
           
-          <button 
-            onClick={downloadPDF} 
+          <button
+            onClick={downloadPDF}
             className="print-btn flex-1 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-5 px-8 rounded-2xl transition-all duration-300 flex items-center justify-center shadow-lg"
           >
             <div className="flex items-center">
