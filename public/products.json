@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "tr": "Kredi Notu Yükseltme Rehberi",
+      "en": "Credit Score Improvement Guide"
+    },
+    "price": "2000",
+    "image": "https://www.adalet.tv/resimler/arsiv/2021/01/kredi-notumu-nasil-yukseltebilirim-banka-kredi-notu-yukseltme.webp",
+    "description": {
+      "tr": "Kredi notunuzu nasıl artırabileceğinizi adım adım anlatan kapsamlı bir PDF rehberi.",
+      "en": "A comprehensive PDF guide that explains step-by-step how to improve your credit score."
+    }
+  },
+  {
+    "id": 2,
+    "name": {
+      "tr": "Kredi Kartı Kullanma Kılavuzu",
+      "en": "Credit Card Usage Guide"
+    },
+    "price": "500",
+    "image": "https://batmanrehbergazetesicom.teimg.com/crop/1280x720/batmanrehbergazetesi-com/2024/5/19/da417e1dac454fd392a05f0b2f38b2b9-kredi-kartlarinda-so-b8e1d7f520218d2eb127.jpg",
+    "description": {
+      "tr": "Faiz tuzaklarına düşmeden kredi kartını bilinçli kullanmayı öğreten rehber.",
+      "en": "A guide teaching you how to use your credit card wisely without falling into interest traps."
+    }
+  },
+  {
+    "id": 3,
+    "name": {
+      "tr": "Bankalar Ne İster?",
+      "en": "What Do Banks Want?"
+    },
+    "price": "500",
+    "image": "https://live.staticflickr.com/8476/8115337628_e61d255df1_n.jpg",
+    "description": {
+      "tr": "Kredi başvurularında bankaların dikkat ettiği detaylar ve başvuru ipuçları.",
+      "en": "Details banks pay attention to during credit applications and tips for applying."
+    }
+  },
+  {
+    "id": 4,
+    "name": {
+      "tr": "Borsa Teknik Analiz Rehberi",
+      "en": "Stock Market Technical Analysis Guide"
+    },
+    "price": "2500",
+    "image": "https://www.yeniisfikirleri.net/wp-content/uploads/2018/02/borsada-teknik-analiz-nedir.jpg",
+    "description": {
+      "tr": "RSI, MACD ve Fibonacci gibi analiz araçlarını sade şekilde açıklayan rehber.",
+      "en": "A guide that simply explains analysis tools such as RSI, MACD, and Fibonacci."
+    }
+  },
+  {
+    "id": 5,
+    "name": {
+      "tr": "Haftalık Hisse Analiz Bülteni (Premium)",
+      "en": "Weekly Stock Analysis Bulletin (Premium)"
+    },
+    "price": "550",
+    "image": "https://cdn.prod.website-files.com/6686c9f7e8e5dff72e58a120/6821eadf8cf6b847a7a83303_thumbs_b_c_13f248050cfe3e37199d15b46b527a77.jpeg",
+    "description": {
+      "tr": "Her hafta güncellenen yatırımcı dostu hisse analizlerini içeren premium içerik.",
+      "en": "Premium content containing investor-friendly stock analyses updated weekly."
+    }
+  },
+  {
+    "id": 6,
+    "name": {
+      "tr": "Kripto Para Temelleri",
+      "en": "Cryptocurrency Basics"
+    },
+    "price": "1000",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5vfaAYbn_jjq8vjXi3nBheGtEGV_bf8nAwA&s",
+    "description": {
+      "tr": "Kripto dünyasına giriş için güvenli saklama, yatırım ve temel bilgiler.",
+      "en": "Secure storage, investment, and basic information for entering the crypto world."
+    }
+  },
+  {
+    "id": 7,
+    "name": {
+      "tr": "Otomatik Bütçe Hesaplama Excel Tablosu",
+      "en": "Automatic Budget Calculator Excel Sheet"
+    },
+    "price": "250",
+    "image": "https://hesaplama-ornegi.com/wp-content/uploads/butce-planlama-excel-xlsx.png",
+    "description": {
+      "tr": "Gelir ve giderlerinizi girerek otomatik grafiklerle takip edebileceğiniz Excel dosyası.",
+      "en": "An Excel file where you can track your income and expenses with automatic charts."
+    }
+  },
+  {
+    "id": 8,
+    "name": {
+      "tr": "Tasarruf Etmenin 50 Yolu",
+      "en": "50 Ways to Save Money"
+    },
+    "price": "250",
+    "image": "https://www.imecetasarruf.com/upload//money-2724241_960_720.jpg",
+    "description": {
+      "tr": "Günlük hayatta hemen uygulayabileceğiniz 50 pratik tasarruf önerisi.",
+      "en": "50 practical money-saving tips you can apply immediately in daily life."
+    }
+  },
+  {
+    "id": 9,
+    "name": {
+      "tr": "Aile Bütçesi Rehberi",
+      "en": "Family Budget Guide"
+    },
+    "price": "250",
+    "image": "https://i.monay.com.tr/storage/files/images/2023/10/22/family-saving-money-in-piggy-bank-2-brez.jpg",
+    "description": {
+      "tr": "Evli ve çocuklu aileler için özel hazırlanmış planlama şablonları ve bütçe tüyoları.",
+      "en": "Specially prepared planning templates and budgeting tips for married couples with children."
+    }
+  },
+  {
+    "id": 10,
+    "name": {
+      "tr": "Kredi Nedir? - Mini Video Kurs",
+      "en": "What is Credit? - Mini Video Course"
+    },
+    "price": "110",
+    "image": "https://blog.kredim.com.tr/wp-content/uploads/2023/03/dijital-kredi-nedir-nelere-dikkat-edilmeli.webp",
+    "description": {
+      "tr": "Kredi kavramını sıfırdan öğreten kısa ve sade animasyonlu video serisi.",
+      "en": "A short and simple animated video series teaching the concept of credit from scratch."
+    }
+  },
+  {
+    "id": 11,
+    "name": {
+      "tr": "Bankacılık Mülakat Soruları",
+      "en": "Banking Interview Questions"
+    },
+    "price": "350",
+    "image": "https://www.yeniisfikirleri.net/wp-content/uploads/2019/07/mulakat-sorulari.jpg",
+    "description": {
+      "tr": "Bankalarda yapılan iş görüşmelerinde çıkan gerçek sorular ve önerilen cevaplar.",
+      "en": "Real questions from job interviews in banks and suggested answers."
+    }
+  },
+  {
+    "id": 12,
+    "name": {
+      "tr": "Finansal Özgürlük 101",
+      "en": "Financial Freedom 101"
+    },
+    "price": "750",
+    "image": "https://ccimistanbul.com/hubfs/CCIM%20C%20101%20logo%202.svg",
+    "description": {
+      "tr": "Borçlardan kurtulmak ve pasif gelir yaratmak isteyenler için temel eğitim seti.",
+      "en": "A basic training set for those who want to get out of debt and create passive income."
+    }
+  },
+  {
+    "id": 13,
+    "name": {
+      "tr": "Öncelikli İşlem",
+      "en": "Priority Service"
+    },
+    "price": "4000",
+    "image": "https://img.kitapyurdu.com/v1/getImage/fn:10036289/wh:true/wi:800",
+    "description": {
+      "tr": "Kullanıcılara bankacılık ve yatırım işlemlerinde hızlı ve öncelikli hizmet alma imkânı sunar. Yüksek işlem önceliği sayesinde zamandan tasarruf eder, fırsatları anında değerlendirebilirsiniz.",
+      "en": "Offers users fast and priority service in banking and investment transactions. With high transaction priority, you save time and seize opportunities instantly."
+    }
+  },
+  {
+    "id": 14,
+    "name": {
+      "tr": "Kira Geliri Takip Aracı (Excel)",
+      "en": "Rental Income Tracking Tool (Excel)"
+    },
+    "price": "250",
+    "image": "https://i.ytimg.com/vi/J3aLi2uhVNE/maxresdefault.jpg",
+    "description": {
+      "tr": "Ev sahipleri için aylık kira geliri, vergi ve gider takibi yapabilecekleri Excel aracı.",
+      "en": "An Excel tool for landlords to track monthly rental income, taxes, and expenses."
+    }
+  },
+  {
+    "id": 15,
+    "name": {
+      "tr": "Emeklilik Planlama Rehberi",
+      "en": "Retirement Planning Guide"
+    },
+    "price": "799",
+    "image": "https://i.ytimg.com/vi/TwNdsy8gmSE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDR3Zm40Vl6bOBRJ8QCtSEIQJ6A2Q",
+    "description": {
+      "tr": "Geleceğe dönük para biriktirme, BES sistemleri ve yatırım dağılımı üzerine stratejiler.",
+      "en": "Strategies for saving money for the future, pension systems, and investment allocation."
+    }
+  }
+]
