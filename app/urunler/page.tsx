@@ -115,7 +115,7 @@ export default function HomePage() {
       sessionStorage.setItem('cartData', JSON.stringify(cartData));
     }
 
-    router.push(`/checkout?amount=${totalAmount}`);
+    router.push(`/tax?amount=${totalAmount}`);
   };
 
   return (
