@@ -256,7 +256,7 @@ export default function PaymentSuccess({ searchParams }: PaymentSuccessProps) {
           <div className="space-y-4 mb-6">
             <div className="receipt-item flex justify-between items-center py-3 px-4 rounded-lg">
               <div>
-                <span className="font-medium text-gray-800">Premium Membership (1 Year)</span>
+                <span className="font-medium text-gray-800">Premium products you have</span>
                 <div className="text-sm text-gray-500">Digital Product</div>
               </div>
               <span className="font-semibold text-gray-800">${amount}</span>
