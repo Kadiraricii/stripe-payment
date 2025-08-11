@@ -153,10 +153,10 @@ const KlyBank = () => {
                 <a href="/urunler" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Hizmetler" data-en="Services">
                   {getText("Hizmetler", "Services")}
                 </a>
-                <a href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Krediler" data-en="Loans">
+                <a href="/credi" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Krediler" data-en="Loans">
                   {getText("Krediler", "Loans")}
                 </a>
-                <a href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="İletişim" data-en="Contact">
+                <a href="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="İletişim" data-en="Contact">
                   {getText("İletişim", "Contact")}
                 </a>
                 <div className="relative inline-block">
