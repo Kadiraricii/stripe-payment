@@ -395,7 +395,7 @@ export default function PaymentSuccess({ searchParams }: PaymentSuccessProps) {
         {/* Footer */}
         <div className="text-center mt-8 text-gray-500">
           <p className="text-sm">This transaction was completed with a secure SSL connection.</p>
-          <p className="text-xs mt-2">For questions: destek@sirket.com | 0850 123 45 67</p>
+          <p className="text-xs mt-2">For questions: destek@sirket.com | 0050 103 00 67</p>
         </div>
       </div>
     </div>
