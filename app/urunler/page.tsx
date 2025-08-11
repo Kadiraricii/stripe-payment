@@ -242,7 +242,7 @@ export default function HomePage() {
                 <h2 className="text-2xl font-semibold mb-2">{product.name[currentLanguage]}</h2>
                 <p className="text-gray-700 mb-4">{product.description[currentLanguage]}</p>
                 <div className="flex justify-between items-center">
-                  <p className="text-xl font-bold text-green-600">{product.price.toLocaleString('tr-TR')}₺</p>
+                  <p className="text-xl font-bold text-green-600">{product.price.toLocaleString('tr-TR')}$</p>
                   <button
                     onClick={() => addToCart(product)}
                     className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center gap-1"
@@ -290,7 +290,7 @@ export default function HomePage() {
                         />
                         <div className="flex-1">
                           <h3 className="font-semibold">{item.name[currentLanguage]}</h3>
-                          <p className="text-green-600 font-bold">{item.price.toLocaleString('tr-TR')}₺</p>
+                          <p className="text-green-600 font-bold">{item.price.toLocaleString('tr-TR')}$</p>
                         </div>
                         <div className="flex items-center gap-2">
                           <button
@@ -322,7 +322,7 @@ export default function HomePage() {
                       <span className="text-xl font-bold" data-tr="Toplam" data-en="Total">
                         {getText("Toplam", "Total")}
                       </span>
-                      <span className="text-xl font-bold text-green-600">{getTotalPrice().toLocaleString('tr-TR')}₺</span>
+                      <span className="text-xl font-bold text-green-600">{getTotalPrice().toLocaleString('tr-TR')}$</span>
                     </div>
                     <div className="flex gap-4">
                       <button
