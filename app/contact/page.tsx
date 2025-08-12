@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+
 
 // Type definitions
 interface FormData {
@@ -245,29 +247,29 @@ const KlyBankContact: React.FC = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <a href="/">
+                <link href="/">
                   <img
                     src="/logoo.jpg"
                     alt="KLY-BANK Logo"
                     className="h-10 w-auto"
                   />
-                </a>
+                </link>
               </div>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a href="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                <link href="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                   {getText("Ana Sayfa", "Home")}
-                </a>
-                <a href="/urunler" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                </link>
+                <link href="/urunler" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                   {getText("Hizmetler", "Services")}
-                </a>
-                <a href="/credi" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                </link>
+                <link href="/credi" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                   {getText("Krediler", "Loans")}
-                </a>
-                <a href="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                </link>
+                <link href="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                   {getText("İletişim", "Contact")}
-                </a>
+                </link>
                 <div className="relative inline-block">
                   <button
                     onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
@@ -579,10 +581,10 @@ const KlyBankContact: React.FC = () => {
                 {getText("Sosyal Medya", "Social Media")}
               </h4>
               <div className="flex justify-center space-x-3 mt-2">
-                <a href="#" className="text-blue-600 hover:text-blue-800"><i className="fab fa-facebook text-xl"></i></a>
-                <a href="#" className="text-blue-400 hover:text-blue-600"><i className="fab fa-twitter text-xl"></i></a>
-                <a href="#" className="text-pink-600 hover:text-pink-800"><i className="fab fa-instagram text-xl"></i></a>
-                <a href="#" className="text-blue-700 hover:text-blue-900"><i className="fab fa-linkedin text-xl"></i></a>
+                <link href="#" className="text-blue-600 hover:text-blue-800"><i className="fab fa-facebook text-xl"></i></link>
+                <link href="#" className="text-blue-400 hover:text-blue-600"><i className="fab fa-twitter text-xl"></i></link>
+                <link href="#" className="text-pink-600 hover:text-pink-800"><i className="fab fa-instagram text-xl"></i></link>
+                <link href="#" className="text-blue-700 hover:text-blue-900"><i className="fab fa-linkedin text-xl"></i></link>
               </div>
             </div>
 
