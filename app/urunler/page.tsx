@@ -150,7 +150,7 @@ export default function HomePage() {
                   {getText("Hizmetler", "Services")}
                 </a>
                 <a
-                  href="#"
+                  href="/credi"
                   className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   data-tr="Krediler"
                   data-en="Loans"
@@ -158,7 +158,7 @@ export default function HomePage() {
                   {getText("Krediler", "Loans")}
                 </a>
                 <a
-                  href="#"
+                  href="/contact"
                   className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   data-tr="İletişim"
                   data-en="Contact"
