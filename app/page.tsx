@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const KlyBank = () => {
   const [currentLanguage, setCurrentLanguage] = useState<'tr' | 'en'>('tr');
@@ -136,29 +137,29 @@ const KlyBank = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <a href="/">
+                <link href="/">
                   <img
                     src="/logoo.jpg"
                     alt="KLY-BANK Logo"
                     className="h-10 w-auto"
                   />
-                </a>
+                </link>
               </div>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Ana Sayfa" data-en="Home">
+                <link href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Ana Sayfa" data-en="Home">
                   {getText("Ana Sayfa", "Home")}
-                </a>
-                <a href="/urunler" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Hizmetler" data-en="Services">
+                </link>
+                <link href="/urunler" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Hizmetler" data-en="Services">
                   {getText("Hizmetler", "Services")}
-                </a>
-                <a href="/credi" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Krediler" data-en="Loans">
+                </link>
+                <link href="/credi" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Krediler" data-en="Loans">
                   {getText("Krediler", "Loans")}
-                </a>
-                <a href="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="İletişim" data-en="Contact">
+                </link>
+                <link href="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="İletişim" data-en="Contact">
                   {getText("İletişim", "Contact")}
-                </a>
+                </link>
                 <div className="relative inline-block">
                   <button
                     onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
@@ -426,15 +427,15 @@ const KlyBank = () => {
                 {getText("Hizmetler", "Services")}
               </h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors" data-tr="Hesaplar" data-en="Accounts">
+                <li><link href="#" className="hover:text-white transition-colors" data-tr="Hesaplar" data-en="Accounts">
                   {getText("Hesaplar", "Accounts")}
-                </a></li>
-                <li><a href="#" className="hover:text-white transition-colors" data-tr="Krediler" data-en="Loans">
+                </link></li>
+                <li><link href="#" className="hover:text-white transition-colors" data-tr="Krediler" data-en="Loans">
                   {getText("Krediler", "Loans")}
-                </a></li>
-                <li><a href="#" className="hover:text-white transition-colors" data-tr="Yatırım" data-en="Investment">
+                </link></li>
+                <li><link href="#" className="hover:text-white transition-colors" data-tr="Yatırım" data-en="Investment">
                   {getText("Yatırım", "Investment")}
-                </a></li>
+                </link></li>
               </ul>
             </div>
             <div>
@@ -442,15 +443,15 @@ const KlyBank = () => {
                 {getText("Destek", "Support")}
               </h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors" data-tr="Müşteri Hizmetleri" data-en="Customer Service">
+                <li><link href="#" className="hover:text-white transition-colors" data-tr="Müşteri Hizmetleri" data-en="Customer Service">
                   {getText("Müşteri Hizmetleri", "Customer Service")}
-                </a></li>
-                <li><a href="#" className="hover:text-white transition-colors" data-tr="SSS" data-en="FAQ">
+                </link></li>
+                <li><link href="#" className="hover:text-white transition-colors" data-tr="SSS" data-en="FAQ">
                   {getText("SSS", "FAQ")}
-                </a></li>
-                <li><a href="#" className="hover:text-white transition-colors" data-tr="İletişim" data-en="Contact">
+                </link></li>
+                <li><link href="#" className="hover:text-white transition-colors" data-tr="İletişim" data-en="Contact">
                   {getText("İletişim", "Contact")}
-                </a></li>
+                </link></li>
               </ul>
             </div>
             <div>
