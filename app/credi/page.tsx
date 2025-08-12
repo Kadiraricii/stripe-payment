@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+
 
 interface LoanCalculatorProps {}
 
@@ -303,29 +305,29 @@ const LoanCalculator: React.FC<LoanCalculatorProps> = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <a href="/">
+                <link href="/">
                   <img
                     src="/logoo.jpg"
                     alt="KLY-BANK Logo"
                     className="h-10 w-auto"
                   />
-                </a>
+                </link>
               </div>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a href="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Ana Sayfa" data-en="Home">
+                <link href="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Ana Sayfa" data-en="Home">
                   {getText("Ana Sayfa", "Home")}
-                </a>
-                <a href="/urunler" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Hizmetler" data-en="Services">
+                </link>
+                <link href="/urunler" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Hizmetler" data-en="Services">
                   {getText("Hizmetler", "Services")}
-                </a>
-                <a href="/credi" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Krediler" data-en="Loans">
+                </link>
+                <link href="/credi" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="Krediler" data-en="Loans">
                   {getText("Krediler", "Loans")}
-                </a>
-                <a href="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="İletişim" data-en="Contact">
+                </link>
+                <link href="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-tr="İletişim" data-en="Contact">
                   {getText("İletişim", "Contact")}
-                </a>
+                </link>
                 <div className="relative inline-block">
                   <button
                     onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
